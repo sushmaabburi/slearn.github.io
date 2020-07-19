@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>tables</title>
+	<style>
+		.navbar{
+	overflow: hidden;
+	background: #333;
+	position: fixed;
+	top: 0;
+	width: 90%;
+     }
+    .navbar a{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 6px 6px;
+	text-decoration: none;
+	font-family: calibri;
+    }
+    .navbar a:hover{
+	background: #dc3545;
+	transition: all .4s ease;
+     }
+		.res-table{
+			overflow-x: auto;
+		}
+		h1,p{
+			font-size: italic;
+			text-align: center;
+			color: #094a89;
+		}
+		table{
+			border-collapse: collapse;
+			width: 100%;
+			font-size: 18px;
+			font-style: italic;
+			text-align: center;
+		}
+		th{
+			background-color: dodgerblue;
+			color: white;
+		}
+		th,td{
+			border: 2px solid #ddd;
+			padding: 15px;
+		}
+	</style>
+</head>
+<body>
+      <div class="res-tab">
+      	<h1>Sathyabama</h1>
+      	<p>Accounts & Payments</p>
+      	<div class="navbar">
+		<a href="index1.html">Home</a>
+		<a href="index.html">Logout</a>
+		
+	</div>
+      	<table>
+      		<tbody>
+      			<tr>
+      				<th>Fee type</th>
+      				<th>Amount(Rs)</th>
+      				<th>    </th>
+      			</tr>
+      			<tr>
+      				<td>Tuition fee</td>
+      				<td>205000</td>
+      				<td><button>paynow</button></td>
+      			</tr>
+      			<tr>
+      				<td>Hostel due</td>
+      				<td>65000</td>
+      				<td><button>paynow</button></td>
+      			</tr>
+      			<tr>
+      				<td>Hostel fine</td>
+      				<td>0</td>
+      				<td><button>paynow</button></td>
+      			</tr>
+      		</tbody>
+      	</table>
+      	
+      </div>
+      <a href="index1.html"><button>Back</button></a>
+</body>
+</html>

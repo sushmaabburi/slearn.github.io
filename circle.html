@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>circle animation progress</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<style>
+		
+		.navbar{
+	    overflow: hidden;
+	    background: #333;
+	    position: fixed;
+	    top: 0;
+	    width: 90%;
+	}
+       .navbar a{
+	   float: left;
+	   display: block;
+	   color: white;
+	   text-align: center;
+	   padding: 14px 16px;
+	   text-decoration: none;
+	   font-family: calibri;
+     }
+       .navbar a:hover{
+	   background: #dc3545;
+	   transition: all .4s ease;
+     }
+		 
+
+		 #circleBar{
+		 	margin-top: 180px;
+		 	text-align: center;
+		 	font-family: tahoma;
+		 }
+
+		 #circleBar .round{
+		 	min-height: 100px;
+		 	margin-top: 30px;
+		 	position: relative;
+		 	margin-bottom: 20px;
+		 }
+
+		 #circleBar .round strong{
+		 	position: absolute;
+		 	top: 50%;
+		 	left: 50%;
+		 	margin-top: -50px;
+		 	transform: translate(-50%);
+		 	font-size: 30px;
+		 	color: #212121;
+		 	font-weight: 100;
+		 }
+
+		 #circleBar span{
+		 	display: black;
+		 	color: #999;
+		 	font-size: 15px;
+		 	margin-top: 10px;
+		 }
+		 #circleBar span i{
+		 	color: #ff5c5c;
+		 	font-size: 20px;
+		 	margin-right: 7px;
+		 }
+		 section button:hover{
+		 	background-color: #ff5c5c;
+		 }
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+
+   <section id="circleBar">
+        <h1>Sathyabama</h1>
+        <p>Attendence</p>
+        <div class="navbar">
+		<a href="index1.html">Home</a>
+		<a href="index.html">Logout</a>
+		
+	</div>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-3">
+        			<div class="round" data-value="0.80"
+        			data-size="100" data-thickness="12">
+        				<strong></strong>
+        				<span><i class="fa fa-laptop"></i>
+        					TODAY
+        				</span>
+        			</div>
+        		</div>
+        		<div class="col-md-3">
+        			<div class="round" data-value="0.70"
+        			data-size="100" data-thickness="12">
+        				<strong></strong>
+        				<span><i class="fa fa-laptop"></i>
+        					YESTERDAY
+        				</span>
+        			</div>
+        		</div>
+
+        		<div class="col-md-3">
+        			<div class="round" data-value="0.95"
+        			data-size="100" data-thickness="12">
+        				<strong></strong>
+        				<span><i class="fa fa-laptop"></i>
+        					THIS SEM
+        				</span>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <button class="btn" onclick="Circlle('.round');">Refresh</button>
+    </section>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+
+    <a href="index1.html"><button>Back</button></a>
+      <script>
+      	
+         function Circlle(el){
+         	$(el).circleProgress({fill: {color: '#ff5c5c'}})
+         	.on('circle-animation-progress', function(event,progress,stepValue){
+         		$(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+         	});
+         };
+
+         Circlle('.round');	
+         
+
+      </script>
+
+</body>
+</html>

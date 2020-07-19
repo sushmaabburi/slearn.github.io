@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Bar progress</title>
+	<link rel="stylesheet" href="style2.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<section id="chart">
+		<h1>Sathyabama</h1>
+		<p>Academic Track</p>
+		<div class="navbar">
+		<a href="index1.html">Home</a>
+		<a href="index.html">Logout</a>
+		
+	</div>
+	<div class="chart">
+		<ul class="numbers">
+			<li><span>100%</span></li>
+			<li><span>50%</span></li>
+			<li><span>0%</span></li>
+		</ul>
+		<ul class="bars">
+			
+			<li><div class="bar" data-percentage="70"></div><span>sem 1.1</span></li>
+			<li><div class="bar" data-percentage="75"></div><span>sem 1.2</span></li>
+			<li><div class="bar" data-percentage="82"></div><span>sem 2.1</span></li>
+			<li><div class="bar" data-percentage="90"></div><span>sem 2.2</span></li>
+		</ul>
+	</div>
+	<a href="index1.html"><button>Back</button></a>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.bars li .bar').each(function(key,bar){
+				var percentage =$(this).data('percentage');
+				$(this).animate({
+					'height':percentage +'%'
+				},1000);
+
+			});
+		}); 
+	</script>
+
+</section>
+</body>
+</html>

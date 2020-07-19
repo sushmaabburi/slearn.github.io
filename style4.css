@@ -1,0 +1,43 @@
+body{
+	font-family: sans-serif;
+	color: #3c3939;
+	background color: #f1f1f1; 
+}
+.navbar{
+	overflow: hidden;
+	background: #333;
+	position: fixed;
+	top: 0;
+	width: 90%;
+}
+.navbar a{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: calibri;
+}
+.navbar a:hover{
+	background: #dc3545;
+	transition: all .4s ease;
+}
+ .profile-card{
+ 	width: 400px;
+ 	margin: auto;
+ 	background: #fff;
+ 	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5 );
+
+ }
+ .image-container{
+      position: relative;
+ }
+ .info{
+ 	color: #4b4fe2;
+ 	margin-right: 16px;
+ }
+ .main-container{
+ 	padding: 20px;
+ 	
+ }
